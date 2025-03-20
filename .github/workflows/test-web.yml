@@ -1,5 +1,8 @@
 name: Test and Build Web
 
+env:
+  HUSKY: 0
+
 on:
   pull_request:
   push:
@@ -16,7 +19,6 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9
           run_install: false
 
       - name: Install Node.js
